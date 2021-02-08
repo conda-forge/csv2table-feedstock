@@ -1,5 +1,5 @@
 {% set name = "csv2table" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csv2table-{{ version }}.tar.gz
-  sha256: 44fbfb952018dc99fd01498bb28cfa49777de315869705a2395932f686d52614
+  sha256: 91544b3178f4dfd6ba1884e0dca02fc728256ecd12d05dfc8f7c67565601c3ac
 
 build:
   number: 0
