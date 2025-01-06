@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csv2table-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/csv2table-{{ version }}.tar.gz
   sha256: 91544b3178f4dfd6ba1884e0dca02fc728256ecd12d05dfc8f7c67565601c3ac
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - csv2table = csv2table.csv2table:cli
@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
     - terminaltables
 
 test:
@@ -33,6 +33,7 @@ test:
     - csv2table --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ickc/csv2table
